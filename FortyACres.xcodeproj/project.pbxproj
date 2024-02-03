@@ -16,6 +16,10 @@
 		80469EAA2B6EBDBC001A077D /* FortyACresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EA92B6EBDBC001A077D /* FortyACresTests.swift */; };
 		80469EB42B6EBDBC001A077D /* FortyACresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EB32B6EBDBC001A077D /* FortyACresUITests.swift */; };
 		80469EB62B6EBDBC001A077D /* FortyACresUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EB52B6EBDBC001A077D /* FortyACresUITestsLaunchTests.swift */; };
+		80469EC32B6ECBBD001A077D /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EC22B6ECBBD001A077D /* LoginPage.swift */; };
+		80469EC52B6ECC53001A077D /* StudentFoodPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EC42B6ECC53001A077D /* StudentFoodPage.swift */; };
+		80469EC72B6ECC83001A077D /* StudentTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EC62B6ECC83001A077D /* StudentTransactions.swift */; };
+		80469EC92B6ED071001A077D /* StudentOrgPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EC82B6ED071001A077D /* StudentOrgPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		80469EAF2B6EBDBC001A077D /* FortyACresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortyACresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80469EB32B6EBDBC001A077D /* FortyACresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortyACresUITests.swift; sourceTree = "<group>"; };
 		80469EB52B6EBDBC001A077D /* FortyACresUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortyACresUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		80469EC22B6ECBBD001A077D /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		80469EC42B6ECC53001A077D /* StudentFoodPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFoodPage.swift; sourceTree = "<group>"; };
+		80469EC62B6ECC83001A077D /* StudentTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTransactions.swift; sourceTree = "<group>"; };
+		80469EC82B6ED071001A077D /* StudentOrgPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOrgPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +111,13 @@
 				80469E942B6EBDBB001A077D /* SceneDelegate.swift */,
 				80469E962B6EBDBB001A077D /* ViewController.swift */,
 				80469E982B6EBDBB001A077D /* Main.storyboard */,
+				80469EC42B6ECC53001A077D /* StudentFoodPage.swift */,
+				80469EC62B6ECC83001A077D /* StudentTransactions.swift */,
+				80469EC22B6ECBBD001A077D /* LoginPage.swift */,
 				80469E9B2B6EBDBC001A077D /* Assets.xcassets */,
 				80469E9D2B6EBDBC001A077D /* LaunchScreen.storyboard */,
 				80469EA02B6EBDBC001A077D /* Info.plist */,
+				80469EC82B6ED071001A077D /* StudentOrgPage.swift */,
 			);
 			path = FortyACres;
 			sourceTree = "<group>";
@@ -258,6 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80469EC32B6ECBBD001A077D /* LoginPage.swift in Sources */,
+				80469EC52B6ECC53001A077D /* StudentFoodPage.swift in Sources */,
+				80469EC72B6ECC83001A077D /* StudentTransactions.swift in Sources */,
+				80469EC92B6ED071001A077D /* StudentOrgPage.swift in Sources */,
 				80469E972B6EBDBB001A077D /* ViewController.swift in Sources */,
 				80469E932B6EBDBB001A077D /* AppDelegate.swift in Sources */,
 				80469E952B6EBDBB001A077D /* SceneDelegate.swift in Sources */,
