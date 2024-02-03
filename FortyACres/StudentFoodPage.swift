@@ -19,21 +19,28 @@ class Vendor {
 
 class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var MenuPicker: UIPickerView!
     @IBOutlet weak var VendorPicker: UIPickerView!
-    var vendors: [Vendor] = [
+    
+        var vendors: [Vendor] = [
             Vendor(name: "Sabor", menu: ["Tacos", "Bowls", "Burritos"]),
             Vendor(name: "Chick-Fil-A", menu: ["Sandwiches", "Salads"])
             
         ]
     
         var selectedVendor: Vendor?
+        var selectedMenuItems: [String] = []
 
         override func viewDidLoad() {
             super.viewDidLoad()
             
             VendorPicker.delegate = self
             VendorPicker.dataSource = self
+            
+            MenuPicker.delegate = self
+            MenuPicker.dataSource = self
             selectedVendor = vendors.first
+            selectedMenuItems = vendors.first?.menu ?? []
         }
         
         // MARK: - UIPickerViewDataSource Methods
@@ -42,16 +49,29 @@ class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDel
         }
         
         func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return vendors.count
-        }
+            if pickerView ==  VendorPicker {
+                        return vendors.count
+                    } else if pickerView == MenuPicker {
+                        return selectedMenuItems.count
+                    }
+                    return 0        }
         
         // MARK: - UIPickerViewDelegate Methods
         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return vendors[row].name
+            if pickerView == VendorPicker {
+                        return vendors[row].name
+                    } else if pickerView == MenuPicker {
+                        return selectedMenuItems[row]
+                    }
+                    return nil
         }
     
         func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            selectedVendor = vendors[row]
+            if pickerView == VendorPicker {
+                        // Update the menu picker view with the selected vendor's menu
+                        selectedMenuItems = vendors[row].menu
+                        MenuPicker.reloadAllComponents()
+                    }
         }
         
         
@@ -60,12 +80,9 @@ class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDel
     
     @IBAction func MenuButton(_ sender: UIButton) {
         if let selectedVendor = selectedVendor {
-            // Join the menu items into a single string with line breaks or any separator you prefer.
-            let menuString = selectedVendor.menu.joined(separator: "\n\n")
-            MenuLabel.text = "\(menuString)"
+            
         } else {
-            // Optional: Handle the case where no vendor is selected or the menu is empty.
-            MenuLabel.text = "Please select a vendor."
+            
         }
     }
 }
