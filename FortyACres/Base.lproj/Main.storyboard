@@ -38,7 +38,7 @@
             </objects>
             <point key="canvasLocation" x="628.24427480916029" y="3.5211267605633805"/>
         </scene>
-        <!--Item 2-->
+        <!--Food/Beverage-->
         <scene sceneID="n0t-mn-yL3">
             <objects>
                 <viewController id="M70-5y-68w" customClass="StudentFoodPage" customModule="FortyACres" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,13 +48,13 @@
                         <viewLayoutGuide key="safeArea" id="gau-x0-yXz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="NVW-1t-ES4"/>
+                    <tabBarItem key="tabBarItem" title="Food/Beverage" selectedImage="takeoutbag.and.cup.and.straw" catalog="system" id="NVW-1t-ES4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1u-0s-OWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2669" y="364"/>
         </scene>
-        <!--Item 1-->
+        <!--My Transactions-->
         <scene sceneID="tJL-oE-AqY">
             <objects>
                 <viewController id="No2-rb-5AQ" customClass="StudentTransactions" customModule="FortyACres" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,7 +64,7 @@
                         <viewLayoutGuide key="safeArea" id="msb-X2-8KA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="uat-C3-61j"/>
+                    <tabBarItem key="tabBarItem" title="My Transactions" selectedImage="dollarsign.arrow.circlepath" catalog="system" id="uat-C3-61j"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64W-ZP-DOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="-298.47328244274809" y="3.5211267605633805"/>
         </scene>
-        <!--Item-->
+        <!--UT Organizations-->
         <scene sceneID="H2L-mL-coK">
             <objects>
                 <viewController id="K6u-BP-Juj" customClass="StudentOrgPage" customModule="FortyACres" customModuleProvider="target" sceneMemberID="viewController">
@@ -118,14 +118,17 @@
                         <viewLayoutGuide key="safeArea" id="t95-zA-SAR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="bFv-9P-TXH"/>
+                    <tabBarItem key="tabBarItem" title="UT Organizations" selectedImage="person.3" catalog="system" id="bFv-9P-TXH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84D-u8-q4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="651"/>
+            <point key="canvasLocation" x="1813" y="746"/>
         </scene>
     </scenes>
     <resources>
+        <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="112"/>
+        <image name="person.3" catalog="system" width="128" height="66"/>
+        <image name="takeoutbag.and.cup.and.straw" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
