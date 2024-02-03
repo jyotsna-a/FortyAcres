@@ -54,8 +54,18 @@ class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDel
             selectedVendor = vendors[row]
         }
         
-        @IBAction func MenuButton(_ sender: UIButton) {
-            guard let menu = selectedVendor?.menu else { return }
-                print("Menu of \(selectedVendor?.name ?? "Selected Vendor"): \(menu.joined(separator: ", "))")
+        
+        @IBOutlet weak var MenuLabel: UILabel!
+    
+    
+    @IBAction func MenuButton(_ sender: UIButton) {
+        if let selectedVendor = selectedVendor {
+            // Join the menu items into a single string with line breaks or any separator you prefer.
+            let menuString = selectedVendor.menu.joined(separator: "\n\n")
+            MenuLabel.text = "\(menuString)"
+        } else {
+            // Optional: Handle the case where no vendor is selected or the menu is empty.
+            MenuLabel.text = "Please select a vendor."
         }
+    }
 }
