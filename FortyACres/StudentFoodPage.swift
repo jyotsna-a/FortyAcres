@@ -80,21 +80,17 @@ class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDel
             DispatchQueue.main.async{
                 self.MenuTable.reloadData()
             }
-            //MenuTable.reloadData() // Refresh the table view
         }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of items in the selected menu
         return selectedMenuItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "RightDetailCell"
             
-            // Try to dequeue a reusable cell
             var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
             
-            // If no reusable cell is available, initialize a new cell with the right detail style
             if cell == nil {
                 cell = UITableViewCell(style: .value1, reuseIdentifier: identifier)
             }

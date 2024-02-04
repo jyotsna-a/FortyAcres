@@ -44,7 +44,6 @@ class StudentOrgPage: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             selectedMenuItems = orgs.first?.menu ?? []
         }
         
-        // MARK: - UIPickerViewDataSource Methods
         func numberOfComponents(in pickerView: UIPickerView) -> Int {
             return 1
         }
@@ -57,7 +56,6 @@ class StudentOrgPage: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                     }
                     return 0        }
         
-        // MARK: - UIPickerViewDelegate Methods
         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
             if pickerView == OrgsPicker {
                         return orgs[row].name

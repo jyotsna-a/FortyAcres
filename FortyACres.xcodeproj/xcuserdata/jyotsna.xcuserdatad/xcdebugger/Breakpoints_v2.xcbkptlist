@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A3825693-94C3-44E7-A799-15E3AEB4A77F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A42AD792-1F85-4B9D-A53B-24730BB39CC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FortyACres/LoginPage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "loginButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A42AD792-1F85-4B9D-A53B-24730BB39CC6 - 770a542dfd72d3ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FortyACres.LoginPage.loginButton(Any) -&gt; ()"
+                  moduleName = "FortyACres"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jyotsna/FortyACres/FortyACres/LoginPage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1368">
+               </Location>
+               <Location
+                  uuid = "A42AD792-1F85-4B9D-A53B-24730BB39CC6 - 770a542dfd72d3ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FortyACres.LoginPage.loginButton(Any) -&gt; ()"
+                  moduleName = "FortyACres"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jyotsna/FortyACres/FortyACres/LoginPage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1780">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

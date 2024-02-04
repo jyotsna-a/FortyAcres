@@ -10,7 +10,7 @@ import UIKit
 class StudentTransactions: UIViewController, UITableViewDataSource, UITableViewDelegate {
     struct Transaction {
         let name: String
-        let date: String // Ideally, use Date and DateFormatter for formatting
+        let date: String
     }
         
         @IBOutlet weak var TranTable: UITableView!
@@ -39,11 +39,9 @@ class StudentTransactions: UIViewController, UITableViewDataSource, UITableViewD
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let identifier = "RightDetailCell"
                 
-                // Try to dequeue a reusable cell
                 var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
                 
-                // If no reusable cell is available, initialize a new cell with the right detail style
-                if cell == nil {
+            if cell == nil {
                     cell = UITableViewCell(style: .value1, reuseIdentifier: identifier)
                 }
                 
