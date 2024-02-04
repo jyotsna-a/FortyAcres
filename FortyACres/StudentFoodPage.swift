@@ -7,30 +7,44 @@
 
 import UIKit
 
-class Vendor {
+class FoodItem {
     var name: String
-    var menu: [String]
+    var price: String
     
-    init(name: String, menu: [String]) {
+    
+    init(name: String, price: String) {
+        self.name = name
+        self.price = price
+    }
+}
+
+class Vendor {
+    
+    var name: String
+    var menu: [FoodItem]
+    
+    
+    init(name: String, menu: [FoodItem]) {
         self.name = name
         self.menu = menu
     }
 }
 
-class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var MenuPicker: UIPickerView!
+    
+    @IBOutlet weak var MenuTable: UITableView!
     @IBOutlet weak var VendorPicker: UIPickerView!
     
         var vendors: [Vendor] = [
-            Vendor(name: "Sabor", menu: ["Tacos", "Bowls", "Burritos"]),
-            Vendor(name: "Chick-Fil-A", menu: ["Sandwiches", "Salads"]),
-            Vendor(name: "Up and Atom", menu: ["Coffee", "Lattes", "Teas", "Pastries"]),
-            Vendor(name: "Jester Java", menu: ["Frappuccinos", "Lattes", "Egg Bites", "Acai"])
+            Vendor(name: "Sabor", menu: [FoodItem(name: "Tacos", price: "$5.97"), FoodItem(name: "Burritos", price: "$9.97"), FoodItem(name: "Bowls", price: "$9.97")]),
+            Vendor(name: "Chick-Fil-A", menu: [FoodItem(name: "Sandwiches", price: "$8.99"), FoodItem(name: "Salads", price: "$9.99"), FoodItem(name: "Sides", price: "$5.49")]),
+            Vendor(name: "Up and Atom", menu: [FoodItem(name: "Lattes", price: "$5.99"), FoodItem(name: "Coffee", price: "$3.99"), FoodItem(name: "Pastries", price: "$6.49")]),
+            Vendor(name: "Jester Java", menu: [FoodItem(name: "Frappuccinos", price: "$6.50"), FoodItem(name: "Lattes", price: "$5.50"), FoodItem(name: "Acai", price: "$4.50")])
         ]
     
         var selectedVendor: Vendor?
-        var selectedMenuItems: [String] = []
+        var selectedMenuItems: [FoodItem] = []
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -38,11 +52,14 @@ class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDel
             VendorPicker.delegate = self
             VendorPicker.dataSource = self
             
-            MenuPicker.delegate = self
-            MenuPicker.dataSource = self
+            MenuTable.delegate = self
+            MenuTable.dataSource = self
             selectedVendor = vendors.first
             selectedMenuItems = vendors.first?.menu ?? []
+            view.addSubview(MenuTable)
+            MenuTable.register(UITableViewCell.self, forCellReuseIdentifier: "RightDetailCell")
         }
+    
         
         // MARK: - UIPickerViewDataSource Methods
         func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -50,28 +67,40 @@ class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDel
         }
         
         func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            if pickerView ==  VendorPicker {
-                        return vendors.count
-                    } else if pickerView == MenuPicker {
-                        return selectedMenuItems.count
-                    }
-                    return 0        }
+                return vendors.count
+        }
         
         // MARK: - UIPickerViewDelegate Methods
         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            if pickerView == VendorPicker {
-                        return vendors[row].name
-                    } else if pickerView == MenuPicker {
-                        return selectedMenuItems[row]
-                    }
-                    return nil
+            return vendors[row].name
         }
     
         func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            if pickerView == VendorPicker {
-                        // Update the menu picker view with the selected vendor's menu
-                        selectedMenuItems = vendors[row].menu
-                        MenuPicker.reloadAllComponents()
-                    }
+            selectedMenuItems = vendors[row].menu
+            DispatchQueue.main.async{
+                self.MenuTable.reloadData()
+            }
+            //MenuTable.reloadData() // Refresh the table view
         }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Return the number of items in the selected menu
+        return selectedMenuItems.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identifier = "RightDetailCell"
+            
+            // Try to dequeue a reusable cell
+            var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
+            
+            // If no reusable cell is available, initialize a new cell with the right detail style
+            if cell == nil {
+                cell = UITableViewCell(style: .value1, reuseIdentifier: identifier)
+            }
+            let menuItem = selectedMenuItems[indexPath.row]
+            cell?.textLabel?.text = menuItem.name
+            cell?.detailTextLabel?.text = menuItem.price
+            return cell!
+    }
 }

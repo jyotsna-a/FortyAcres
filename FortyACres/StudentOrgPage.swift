@@ -74,4 +74,9 @@ class StudentOrgPage: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                         PayPicker.reloadAllComponents()
                     }
         }
+    
+    
+    @IBAction func payButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "pay", sender: nil)
+    }
 }

@@ -21,6 +21,7 @@
 		80469EC52B6ECC53001A077D /* StudentFoodPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EC42B6ECC53001A077D /* StudentFoodPage.swift */; };
 		80469EC72B6ECC83001A077D /* StudentTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EC62B6ECC83001A077D /* StudentTransactions.swift */; };
 		80469EC92B6ED071001A077D /* StudentOrgPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469EC82B6ED071001A077D /* StudentOrgPage.swift */; };
+		8077DB8A2B6FCF1C00EA16E2 /* PaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8077DB892B6FCF1C00EA16E2 /* PaymentPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		80469EC42B6ECC53001A077D /* StudentFoodPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFoodPage.swift; sourceTree = "<group>"; };
 		80469EC62B6ECC83001A077D /* StudentTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTransactions.swift; sourceTree = "<group>"; };
 		80469EC82B6ED071001A077D /* StudentOrgPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOrgPage.swift; sourceTree = "<group>"; };
+		8077DB892B6FCF1C00EA16E2 /* PaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPage.swift; sourceTree = "<group>"; };
 		80CF13602B6F204D00316F24 /* FortyACres.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FortyACres.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				80469E9D2B6EBDBC001A077D /* LaunchScreen.storyboard */,
 				80469EA02B6EBDBC001A077D /* Info.plist */,
 				80469EC82B6ED071001A077D /* StudentOrgPage.swift */,
+				8077DB892B6FCF1C00EA16E2 /* PaymentPage.swift */,
 			);
 			path = FortyACres;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8077DB8A2B6FCF1C00EA16E2 /* PaymentPage.swift in Sources */,
 				80469EC32B6ECBBD001A077D /* LoginPage.swift in Sources */,
 				80469EC52B6ECC53001A077D /* StudentFoodPage.swift in Sources */,
 				80469EC72B6ECC83001A077D /* StudentTransactions.swift in Sources */,

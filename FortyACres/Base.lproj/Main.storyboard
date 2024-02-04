@@ -172,17 +172,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgT-vN-eOj">
-                                <rect key="frame" x="0.0" y="468" width="393" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZR-OX-wrB">
-                                <rect key="frame" x="139" y="677" width="114" height="35"/>
+                                <rect key="frame" x="139" y="731" width="114" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Place Order"/>
                                 <connections>
                                     <action selector="MenuButton:" destination="M70-5y-68w" eventType="touchUpInside" id="v9i-v1-cNI"/>
+                                    <action selector="payBtn:" destination="M70-5y-68w" eventType="touchUpInside" id="Iq0-L1-Lbi"/>
+                                    <action selector="payButton:" destination="M70-5y-68w" eventType="touchUpInside" id="DtI-b5-2ty"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egF-KA-ef1">
@@ -208,13 +206,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.72941176470000002" green="0.33725490200000002" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O6Q-N1-wXI">
+                                <rect key="frame" x="-1" y="454" width="393" height="258"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gau-x0-yXz"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.98431372549019602" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Food/Beverage" selectedImage="takeoutbag.and.cup.and.straw" catalog="system" id="NVW-1t-ES4"/>
                     <connections>
-                        <outlet property="MenuPicker" destination="rgT-vN-eOj" id="XIa-ST-tJK"/>
+                        <outlet property="MenuTable" destination="O6Q-N1-wXI" id="WCp-4k-J2f"/>
                         <outlet property="VendorPicker" destination="mj4-Uy-cBV" id="BaW-cL-WSF"/>
                     </connections>
                 </viewController>
@@ -370,6 +373,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Pay Now"/>
                                 <connections>
                                     <action selector="MenuButton:" destination="M70-5y-68w" eventType="touchUpInside" id="GhR-Qj-dEM"/>
+                                    <action selector="payButton:" destination="K6u-BP-Juj" eventType="touchUpInside" id="rIl-6J-y91"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hqj-Cr-Qak">
@@ -385,15 +389,54 @@
                     <connections>
                         <outlet property="OrgsPicker" destination="eLJ-Fy-ZHe" id="Hpg-3w-jLa"/>
                         <outlet property="PayPicker" destination="ela-9W-vSF" id="bur-fX-TRd"/>
+                        <segue destination="YMM-XL-17D" kind="presentation" identifier="pay" id="upE-lS-Xbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84D-u8-q4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1813" y="746"/>
         </scene>
+        <!--Payment Page-->
+        <scene sceneID="mqb-5i-DnY">
+            <objects>
+                <viewController id="YMM-XL-17D" customClass="PaymentPage" customModule="FortyACres" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wS6-Zq-UMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IMQ-2S-RBo">
+                                <rect key="frame" x="16" y="80" width="69" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.72941176470000002" green="0.33725490200000002" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVK-2d-jLd">
+                                <rect key="frame" x="93" y="100" width="66" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HeI-j5-Snf">
+                                <rect key="frame" x="16" y="227" width="361" height="423"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CRs-A6-rji"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.98431372549019602" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="TranTable" destination="HeI-j5-Snf" id="BTz-Qs-Mio"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ald-hn-1r6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684.7328244274809" y="1126.7605633802818"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Forty acres logo" width="1024" height="1024"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="person.3" catalog="system" width="128" height="66"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
