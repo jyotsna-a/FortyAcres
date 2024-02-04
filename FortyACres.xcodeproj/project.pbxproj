@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801DF5042B6FC01900A78A91 /* OrgPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801DF5032B6FC01900A78A91 /* OrgPage.swift */; };
 		80469E932B6EBDBB001A077D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469E922B6EBDBB001A077D /* AppDelegate.swift */; };
 		80469E952B6EBDBB001A077D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469E942B6EBDBB001A077D /* SceneDelegate.swift */; };
 		80469E972B6EBDBB001A077D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80469E962B6EBDBB001A077D /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		801DF5032B6FC01900A78A91 /* OrgPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgPage.swift; sourceTree = "<group>"; };
 		80469E8F2B6EBDBB001A077D /* FortyACres.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortyACres.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80469E922B6EBDBB001A077D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80469E942B6EBDBB001A077D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				80469EC42B6ECC53001A077D /* StudentFoodPage.swift */,
 				80469EC62B6ECC83001A077D /* StudentTransactions.swift */,
 				80469EC22B6ECBBD001A077D /* LoginPage.swift */,
+				801DF5032B6FC01900A78A91 /* OrgPage.swift */,
 				80469E9B2B6EBDBC001A077D /* Assets.xcassets */,
 				80469E9D2B6EBDBC001A077D /* LaunchScreen.storyboard */,
 				80469EA02B6EBDBC001A077D /* Info.plist */,
@@ -277,6 +280,7 @@
 				80469EC72B6ECC83001A077D /* StudentTransactions.swift in Sources */,
 				80469EC92B6ED071001A077D /* StudentOrgPage.swift in Sources */,
 				80469E972B6EBDBB001A077D /* ViewController.swift in Sources */,
+				801DF5042B6FC01900A78A91 /* OrgPage.swift in Sources */,
 				80469E932B6EBDBB001A077D /* AppDelegate.swift in Sources */,
 				80469E952B6EBDBB001A077D /* SceneDelegate.swift in Sources */,
 			);
