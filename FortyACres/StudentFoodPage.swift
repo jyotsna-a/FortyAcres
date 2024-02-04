@@ -24,8 +24,9 @@ class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDel
     
         var vendors: [Vendor] = [
             Vendor(name: "Sabor", menu: ["Tacos", "Bowls", "Burritos"]),
-            Vendor(name: "Chick-Fil-A", menu: ["Sandwiches", "Salads"])
-            
+            Vendor(name: "Chick-Fil-A", menu: ["Sandwiches", "Salads"]),
+            Vendor(name: "Up and Atom", menu: ["Coffee", "Lattes", "Teas", "Pastries"]),
+            Vendor(name: "Jester Java", menu: ["Frappuccinos", "Lattes", "Egg Bites", "Acai"])
         ]
     
         var selectedVendor: Vendor?
@@ -73,16 +74,4 @@ class StudentFoodPage: UIViewController, UIPickerViewDataSource, UIPickerViewDel
                         MenuPicker.reloadAllComponents()
                     }
         }
-        
-        
-        @IBOutlet weak var MenuLabel: UILabel!
-    
-    
-    @IBAction func MenuButton(_ sender: UIButton) {
-        if let selectedVendor = selectedVendor {
-            
-        } else {
-            
-        }
-    }
 }

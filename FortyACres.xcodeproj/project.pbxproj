@@ -57,6 +57,7 @@
 		80469EC42B6ECC53001A077D /* StudentFoodPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFoodPage.swift; sourceTree = "<group>"; };
 		80469EC62B6ECC83001A077D /* StudentTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTransactions.swift; sourceTree = "<group>"; };
 		80469EC82B6ED071001A077D /* StudentOrgPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOrgPage.swift; sourceTree = "<group>"; };
+		80CF13602B6F204D00316F24 /* FortyACres.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FortyACres.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 		80469E912B6EBDBB001A077D /* FortyACres */ = {
 			isa = PBXGroup;
 			children = (
+				80CF13602B6F204D00316F24 /* FortyACres.entitlements */,
 				80469E922B6EBDBB001A077D /* AppDelegate.swift */,
 				80469E942B6EBDBB001A077D /* SceneDelegate.swift */,
 				80469E962B6EBDBB001A077D /* ViewController.swift */,
@@ -456,8 +458,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FortyACres/FortyACres.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWKC87R8C7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FortyACres/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -483,8 +487,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FortyACres/FortyACres.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWKC87R8C7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FortyACres/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
